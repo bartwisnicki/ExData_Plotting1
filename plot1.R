@@ -13,7 +13,7 @@ my_data <- subset(data, data$Date == "2007-02-01" | data$Date == "2007-02-02")
 # Switching from string to numeric
 my_data$Global_active_power <- as.numeric(my_data$Global_active_power)
 
-# Making histogram
+# Making histogram - the default height and weight for png function is 480
 png(filename = "plot1.png")
 hist(my_data$Global_active_power, freq = T, col = "red", main = "Global Active Power",
      xlab = "Global Active Power (kilowatts)") 
